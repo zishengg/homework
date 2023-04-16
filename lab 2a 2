@@ -1,0 +1,6 @@
+students_name = input("Please enter your name")
+students_marks = int(input("Please enter your marks"))
+if students_marks >= 50:
+    print("Congradulations",students_name,",you have passed the exam!")
+else:
+    print("You have failed the exam")
