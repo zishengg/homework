@@ -1,0 +1,24 @@
+marks = int(input("Please enter your marks: "))
+if marks<0 or marks>100:
+    print("invalid entry")
+else:
+    if marks in range (80, 101):
+        grade = "A"
+        status = "Pass"
+    elif marks in range (70, 80):
+        grade = "B"
+        status = "Pass"
+    elif marks in range (60, 70):
+        grade = "C"
+        status = "Pass"
+    elif marks in range (50,60):
+        grade = "D"
+        status = "Pass"
+    
+    else:  
+        grade = "F"
+        status = "Fail"
+print("Your marks:", marks)
+print("Your grades:", grade)
+print("Your status:", status)
+      
