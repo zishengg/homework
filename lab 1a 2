@@ -1,0 +1,12 @@
+name =input("Please enter your name:")
+tp_number =input("Please enter your TP number:")
+Marks =int(input("Please enter your marks"))
+Grade =input("Please enter your grade")
+CGPA =float(intput("Please enter your CGPA"))
+
+print("Your details are as follows:")
+print("Name",name)
+print("TP number",tp_number)
+print("Marks",Marks)
+print("Grade",Grade)
+print("CGPA",CGPA)

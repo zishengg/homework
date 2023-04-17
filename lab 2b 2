@@ -1,0 +1,4 @@
+num = 0
+while num <= 38:
+        num += 2
+        print (num)
