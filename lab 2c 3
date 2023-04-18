@@ -1,0 +1,14 @@
+assignment = int(input("Enter your assignment marks:"))
+
+if assignment >25:
+    test = int(input("Enter your test marks:"))
+    if test >=25:
+        exam = int(input("Enter your exam marks:"))
+        if exam >=50:
+            print("Congratulations, you have passed the module")
+        else:
+            print("Please resit the exam")
+    else:
+        print("Please resit the test")
+else:
+    print("please redo the assignment")
