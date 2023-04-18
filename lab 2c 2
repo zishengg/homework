@@ -1,0 +1,15 @@
+students=int(input("Number of students?"))
+marks = []
+
+for i in range(students):
+    student_names = input("Student name?")
+    if not student_names:
+        break
+    student_marks = int(input("Student marks?"))
+    if marks == 999:
+        break
+    if student_marks <0 or >100
+         print ("error")
+    else marks.append(mark)
+
+print("The average marks is"sum(student_marks)/len(student_marks))
