@@ -1,4 +1,4 @@
-selling_price = int(input(“Enter the selling price: "))
+selling_price = int(input("Enter the selling price"))
 buying_price = int(input("Enter the buying price: "))
 
 if selling_price > buying_price:
