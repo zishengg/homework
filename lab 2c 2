@@ -10,6 +10,5 @@ for i in range(students):
         break
     if student_marks <0 or >100
          print ("error")
-    else marks.append(mark)
 
 print("The average marks is"sum(student_marks)/len(student_marks))
