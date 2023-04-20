@@ -3,8 +3,8 @@ all = []
 
 for i in range (students):
      student_name = input("Please enter the name of student " + str(i+1) + ": ")
-    all.append(student_name)
-    all.sort()
+all.append(student_name)
+all.sort()
 
 print("All the students are:", all)
 
