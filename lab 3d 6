@@ -1,0 +1,23 @@
+name = input("Name of studen?")
+tp = int(input("Student's Tp number?"))
+subjects = int(input("Number of subjects?"))
+store = []
+
+for i in range(subjects):
+    marks= int(input("What is the marks of subject" + str(i) + "in this semester?"))
+    store.append(marks)
+
+average = sum(store)/subjects
+
+if average in range(80,101):
+    grade = "A"
+elif average in range(70,80):
+    grade = "B"
+elif average in range(60,70):
+    grade = "C"
+elif average in range(50,60):
+    grade = "D"
+else:
+    grade = "F"
+
+print(name, tp, sum(store), average, grade)
