@@ -1,0 +1,11 @@
+elements = ()
+
+for i in range (1,11):
+    element = input("enter element" + str(i) + ":")
+    elements.append(element)
+
+print("The elements are:")
+for element in elements:
+    print(element)
+
+
