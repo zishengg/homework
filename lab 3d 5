@@ -1,0 +1,11 @@
+number = int(input(input("Number of students?")))
+scores = []
+
+for i in range(number):
+    score = int(input(print("Enter the score of student"+ str(i)+ ": ")))
+    scores.append(score)
+
+average = sum(scores)/number
+integer = int(average)
+print("The average score as an integer value is:",integer)
+
