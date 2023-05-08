@@ -20,4 +20,4 @@ elif average in range(50,60):
 else:
     grade = "F"
 
-print(name /n tp/n sum(store)/n average/n grade)
+print( name /n tp /n sum(store) /n average"%" /n grade )

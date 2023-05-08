@@ -1,8 +1,8 @@
-number = int(input(input("Number of students?")))
+number = int(input("Number of students?"))
 scores = []
 
 for i in range(number):
-    score = int(input(print("Enter the score of student"+ str(i)+ ": ")))
+    score = int(input("Enter the score of student " + str(i+1) + ": "))
     scores.append(score)
 
 average = sum(scores)/number

@@ -1,8 +1,8 @@
-number_of_elements = int(input("How many elements will be entered"))
+number_of_elements = int(input("How many elements will be entered: "))
 elements = []
 
 for i in range (number_of_elements):
-    integer = int(input("Please input integer element" + str(i) + ":"))
+    integer = int(input("Please input integer element " + str(i) + ":"))
     elements.append(integer)
 
 print("Here are all the elements")

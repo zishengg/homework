@@ -1,7 +1,0 @@
-num1 = int(input("please input first number"))
-num2 = int(input("please input second number"))
-num3 = int(input("please input third number"))
-num4 = int(input("please input fourth number"))
-num5 = int(input("please input fifth number"))
-
-average = (num1 + num2 + num3 + num4 + num5)/5
