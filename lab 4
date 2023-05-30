@@ -1,0 +1,5 @@
+def sumOfTwoNumber(number1, number2):
+    total = number1 + number2
+    print('Sum of the given two numbers is', total)
+    return total
+

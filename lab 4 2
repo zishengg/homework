@@ -1,0 +1,8 @@
+def findDifference (number1, number2):
+    total = number1 - number2
+    print('The difference between the 2 numbers is', total)
+    return total 
+
+findDifference(1,2)
+
+
