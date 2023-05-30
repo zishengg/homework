@@ -1,0 +1,49 @@
+
+def add(num1, num2):
+    total = num1 + num2
+    return total 
+
+def subtract(num1, num2):
+    total = num1 - num2
+    return total 
+
+def multiply(num1, num2):
+    total = num1 * num2
+    return total 
+
+def divide(num1, num2):
+    total = num1 / num2
+    return total 
+
+print('Calculator')
+print('1. ADD')
+print('2. SUBTRACT')
+print('3. MULTIPLY')
+print('4. DIVIDE')
+
+choose = int(input('Enter which function: '))
+
+if choose == 1:
+    num1=float(input('First Number: '))
+    num2=float(input('Second Number: '))
+    result = num1 + num2
+    print (result)
+elif choose == 2:
+    num1=float(input('First Number: '))
+    num2=float(input('Second Number: '))
+    result = num1 - num2
+    print (result)
+
+elif choose == 3:
+    num1=float(input('First Number: '))
+    num2=float(input('Second Number: '))
+    result = num1 * num2
+    print (result)
+elif choose == 4:
+    num1=float(input('First Number: '))
+    num2=float(input('Second Number: '))
+    result = num1 / num2
+    print (result)
+
+else: 
+    print('error')
