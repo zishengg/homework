@@ -1,0 +1,42 @@
+10000	Apples	Fruits	Pieces	5.0	12	20	
+10010	Oranges	Fruits	Pieces	5.0	34	20	
+10020	Tomatoes	Fruits	Pieces	7.0	25	20	
+10030	Bananas	Fruits	Bunch	7.0	18	20	
+10040	Grapes	Fruits	Packets	10.0	35	20	
+10050	Strawberries	Fruits	Packets	8.5	26	20	
+10060	Watermelon	Fruits	Pieces	20.0	11	20	
+10070	Pears	Fruits	Pieces	5.0	35	20	
+10080	Lemons	Fruits	Pieces	2.5	42	20	
+10090	Mangoes	Fruits	Pieces	5.0	15	20	
+15000	Milk 1L	Dairy	Bottles	8.5	30	15	
+15100	Yogurt 1L	Dairy	Bottles	10.0	9	15	
+15200	Butter	Dairy	Packs	15.0	12	15	
+15300	Cheese	Dairy	Packs	9.5	23	20	
+15400	Ice Cream	Dairy	Packs	11.0	25	10	
+20000	Biscuits	Snacks	Packets	5.0	50	20	
+20100	Cookies	Snacks	Packets	7.5	30	20	
+20200	Pocky	Snacks	Packets	6.0	20	20	
+20300	Potato Chips	Snacks	Packets	8.0	17	20	
+20400	Candies	Snacks	Pieces	1.0	80	50	
+22000	Chicken Thighs	Poultry	Packs	15.0	4	10	
+22100	Chicken Breasts	Poultry	Packs	15.0	32	20	
+22200	Eggs 12pack	Poultry	Carton	9.5	3	20	
+25000	Grounded Beef 200g	Frozen	Packs	20.0	17	15	
+25100	Beef Patties	Frozen	Packs	30.0	9	10	
+25200	Chicken Nuggets	Frozen	Packs	17.5	8	12	
+25300	Duck Breasts	Frozen	Packs	20.0	13	10	
+25400	Fish Fillets	Frozen	Packs	20.0	15	10	
+30000	Cabbages	Vegetables	Packs	5.0	29	30	
+30100	Broccoli	Vegetables	Packs	5.0	45	30	
+30200	Lettuce	Vegetables	Packs	5.0	31	30	
+30300	Long Beans	Vegetables	Packs	5.0	37	30	
+30400	Onion	Vegetables	Packs	5.0	9	30	
+30500	Radish	Vegetables	Packs	5.0	13	30	
+30600	Green Beans	Vegetables	Packs	5.0	52	30	
+30700	Bean Sprouts	Vegetables	Packs	5.0	32	30	
+30800	Potatoes	Vegetables	Packs	10.0	12	30	
+30900	Ginger	Vegetables	Packs	10.0	40	30	
+31000	Garlic	Vegetables	Packs	5.0	21	30	
+31100	Okra	Vegetables	Packs	5.0	46	30	
+31200	Spinach	Vegetables	Packs	5.0	29	30	
+31300	Cucumber	Vegetables	Packs	5.0	18	30	

@@ -1,9 +1,55 @@
-def display ():
-    print('Student name: ')
+student = []
+name = input("Enter Student Name: ")
+tpnumber = input("Enter " + name + "'s TP Number: ")
+subnum = int(input("How many subjects in Semester: "))
+
+marks = []
+for i in range(subnum):
+    subject_mark = int(input("Please input subject " + str(i+1) + " marks: "))
+    marks.append(subject_mark)
+
+student.append(name)
+student.append(tpnumber)
+student.append(marks)
+
+
+def display():
+    total_marks = calculate_total(marks)
+    average_marks = calculate_average(total_marks, subnum)
+    grades = calculate_grade(average_marks)
     
+    print("Name: ", name)
+    print("TP Number: ", tpnumber)
+    print("Total: ", total_marks)
+    print("Average of Semester: ", average_marks)
+    print("Grade: ", grades)
 
-def mark 
 
-def average 
+def calculate_total(marks):
+    return sum(marks)
 
-def grade 
+
+def calculate_average(total, subnum):
+    average = total / subnum
+    return average
+
+
+def calculate_grade(average):
+    if average >= 80:
+        return "A+"
+    elif average >= 75:
+        return "A"
+    elif average >= 70:
+        return "B+"
+    elif average >= 65:
+        return "B"
+    elif average >= 60:
+        return "C+"
+    elif average >= 55:
+        return "C"
+    elif average >= 50:
+        return "C-"
+    else:
+        return "D/Fail"
+
+display()

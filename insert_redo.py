@@ -1,10 +1,12 @@
+# Group 35
+# MELVIN LEE MING XUAN, LEE JUN KEAT, KO ZI SHENG, LEE JUN YANG, NGA YIJENG
+# TP068939, TP067856, TP068150, TP068535, TP068512
 
-GroceryList = [[10000, 'Milk, 1L', 'Dairy', 'Box', 7.00, 30, 5],
-    [20000, 'Beef 200g' , 'Freezer', 'Pack', 20.00, 10, 5 ],
-    [30000, 'Apple', 'Fruits','Pieces', 2.00, 50, 30],
-    [32000, 'Fruits','Pieces', 2.50, 23, 30]]
+GroceryList = []
 
-# universal input by Mel
+# MELVIN LEE MING XUAN
+# TP068939
+# to get the user to insert content for update purposes
 def UserInput():
     Item_Code = int(input("Please enter the item code: "))
     Name = input("Please enter the item name: ")
@@ -15,8 +17,11 @@ def UserInput():
     Min_Quantity = int(input("Please enter the mininum quantity: "))
     return Item_Code, Name, Category, Unit, Price, Quantity, Min_Quantity
 
-
-# Insert new item by JK
+# LEE JUN KEAT
+# TP067856
+# AppendFile() will be used to insert a new item into the master list
+# while write_to_file() will be used to write any new changes into the text file
+# write_to_file() will also be used in later functions to keep the text file up to date
 def AppendFile():
     new_data = []
     ItemCode = int(input("Please enter the item code: "))
@@ -37,7 +42,7 @@ def AppendFile():
     write_to_file()
 
 def write_to_file():
-    with open('redoList.txt','w') as file:
+    with open('Inventory.txt','w') as file:
         for List in GroceryList:
             for data in List:
                 file.write(str(data))
@@ -45,18 +50,16 @@ def write_to_file():
             file.write('\n')
 
 
-
-# Update item by Scott
+# LEE JUN YANG
+# TP068535
+# InsertUpdate() will first gather user input
+# ApplyUpdate() will then run to make changes into the list
 def ApplyUpdate(item_list, item_code, new_details):
     for item in item_list:
         if item[0] == item_code:
             item[0:] = new_details
 
-
-    with open('redoList.txt', 'w') as file:
-        for List in GroceryList:
-            file.write(str(List))
-            file.write('\n')
+    write_to_file()
 
 def InsertUpdate():
     select_item = int(input("Enter the item code for the list you wish to update: "))
@@ -67,8 +70,9 @@ def InsertUpdate():
     ApplyUpdate(GroceryList, select_item, new_details)
 
 
-
-# Delete Item by KuZi
+# KO ZI SHENG
+# TP068150
+# delete_item() will remove a list based on the user input item code
 def delete_item():
     DeleteCode = int(input("Enter the item code for the list you wish to remove: "))
     for item in GroceryList:
@@ -81,13 +85,11 @@ def delete_item():
             elif delete_confirmation == "N":
                 print("Removal cancelled")
 
-    with open('redoList.txt', 'w') as file:
-        for List in GroceryList:
-            file.write(str(List))
-            file.write('\n')
+    write_to_file()
 
-
-# Stock Taking by YJ
+# NGA YIJENG
+# TP068512
+# stock_taking() will reveal the item code,name and quantity in stock
 def stock_taking():
     userinput = int(input('Enter the item code for the item you wish to check: '))
     for item in GroceryList:
@@ -96,7 +98,9 @@ def stock_taking():
             print(item[-2], item[-4], 'of', item[1], 'in stock')
 
 
-# Show Understock by Mel
+# MELVIN LEE MING XUAN
+# TP068939
+# ShowUnderstock() will show all items that have less quantity in stock than the minimum threshold
 def ShowUnderstock():
     for item in GroceryList:
         if item[-1] > item[-2]:
@@ -105,7 +109,10 @@ def ShowUnderstock():
 
 
 
-# Stock Replenishment by KuZi | should be good
+
+# KO ZI SHENG
+# TP068150
+# stock_replenishment(inventory) will allow the user to add/change the number of quantity in stock
 def stock_replenishment(inventory):
     InputCode = int(input("Enter the item code of the item you wish to replenish: "))
     for item in inventory:
@@ -118,14 +125,12 @@ def stock_replenishment(inventory):
             print(f"Quantity for item {item[0]} - {item[1]}: {item[-2]}")
 
 
-    with open('redoList.txt', 'w') as file:
-        for List in GroceryList:
-            file.write(str(List))
-            file.write('\n')
+    write_to_file()
 
 
-
-# search: description by Scott | kinda good
+# LEE JUN YANG
+# TP068535
+# search_item_by_description(item_list) will show the item with the matching user given item name
 def search_item_by_description(item_list):
     search_description = input("Enter item description to search: ")
     for item in item_list:
@@ -133,7 +138,10 @@ def search_item_by_description(item_list):
             print(item)
 
 
-# Search: item code range by JK | ALL GOOD NOW
+
+# LEE JUN KEAT
+# TP067856
+# search_code_range() will show the items with the item code within the user given search range
 def search_code_range():
     Min_range = int(input('Please enter the minimum code range: '))
     Max_range = int(input('Please enter the maximum code range: '))
@@ -142,7 +150,10 @@ def search_code_range():
         if Item_Code > Min_range and Item_Code < Max_range:
             print(item)
 
-# Search: Category by JK | horrible name choice for variables
+
+# LEE JUN KEAT
+# TP067856
+# search_categories() will show the items within the user given category
 def search_categories():
     Search_category = input("Please type a category: ")
     for item in GroceryList:
@@ -151,7 +162,9 @@ def search_categories():
             print(item)
 
 
-# Search: Price by Mel
+# MELVIN LEE MING XUAN
+# TP068939
+# PriceSearch() will show the item with prices within the user given price range
 def PriceSearch():
     MinPrice = int(input("enter the min price search range: "))
     MaxPrice = int(input("enter the max price search range: "))
@@ -163,7 +176,11 @@ def PriceSearch():
 
 
 
-# menu loop system by Mel
+# MELVIN LEE MING XUAN
+# TP068939
+# ContTerm() will keep the menu system in loop
+# this will allow the user more control over when to return to menu
+# rather than instantly going back to the menu
 def ContTerm():
     print('Do you want to continue?\n‘0’ to Continue \t‘-1’ to Terminate')
     CTinput = int(input("Enter your choice: "))
@@ -173,16 +190,21 @@ def ContTerm():
         quit()
 
 
-# ADDITIONAL | views the entire list by Mel
+
+# MELVIN LEE MING XUAN
+# TP068939
+# ViewList() is an additional function just to view all items in the master list for convenience
 def ViewList():
-    f = open("redoList.txt", "r")
+    f = open("Inventory.txt", "r")
     print(f.read())
 
 
 
-# reads the text file to load in the masterlist
+# MELVIN LEE MING XUAN
+# TP068939
+# LoadLastSave() will read from the text file to "load in" all previous master list entries
 def LoadLastSave():
-    f = open("redoList.txt", "r")
+    f = open("Inventory.txt", "r")
     for lists in f:
         SaveList = []
         data = lists.strip().split("\t")
@@ -195,7 +217,10 @@ def LoadLastSave():
         SaveList.append(int(data[6]))
         GroceryList.append(SaveList)
 
-# menu by Mel
+
+# MELVIN LEE MING XUAN
+# TP068939
+# MenuSystem() will be the main menu function giving the user control over all functions
 def MenuSystem():
     print("Welcome to the Grocery Inventory System!!")
     print('\t1. Insert New item\n\t2. Update Item\n\t3. Delete Item\n\t4. View List')
