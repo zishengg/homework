@@ -26,7 +26,7 @@
 25200	Chicken Nuggets	Frozen	Packs	17.5	8	12	
 25300	Duck Breasts	Frozen	Packs	20.0	13	10	
 25400	Fish Fillets	Frozen	Packs	20.0	15	10	
-30000	Cabbages	Vegetables	Packs	5.0	29	30	
+30000	Cabbages	Vegetables	Packs	5.0	39	30	
 30100	Broccoli	Vegetables	Packs	5.0	45	30	
 30200	Lettuce	Vegetables	Packs	5.0	31	30	
 30300	Long Beans	Vegetables	Packs	5.0	37	30	

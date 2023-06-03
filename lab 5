@@ -1,16 +1,33 @@
-student = []
-name = input("Enter Student Name: ")
-tpnumber = input("Enter " + name + "'s TP Number: ")
-subnum = int(input("How many subjects in Semester: "))
+def details():
+    student = []
+    name = input("Enter Student Name: ")
+    tpnumber = input("Enter " + name + "'s TP Number: " )
+    subnum = int(input("How many subjects in Semeste: "))
 
-marks = []
-for i in range(subnum):
-    subject_mark = int(input("Please input subject " + str(i+1) + " marks: "))
-    marks.append(subject_mark)
+    mark = []
+    for i in range (subnum):
+        subject_marks = int(input("Enter Subject " +str(i+1) +" Marks " ))
+        mark.append(subject_marks)
 
-student.append(name)
-student.append(tpnumber)
-student.append(marks)
+    student.append(name)
+    student.append(tpnumber)
+    student.append(subnum)
+    return student 
+
+
+def what():
+    print("Do you want to continue? 0 to Continue -1 to Terminate")
+    yea = int(input("Continue or Terminate?"))
+    if yea ==0:
+        details()
+    if yea ==-1:
+        quit()
+    return
+
+def displays():
+    choice = int(input("Your option are:\n  1. Add new student detail.\n    2. View all sutdent details.\n  3. Search Specific student detail. "))
+    if choice == 1:
+      return
 
 
 def display():

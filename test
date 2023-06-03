@@ -1,0 +1,76 @@
+def details():
+    student = []
+    name = input("Enter Student Name: ")
+    tpnumber = input("Enter " + name + "'s TP Number: ")
+    subnum = int(input("How many subjects in Semester: "))
+
+    mark = []
+    for i in range(subnum):
+        subject_marks = int(input("Enter Subject " + str(i+1) + " Marks: "))
+        mark.append(subject_marks)
+
+    student.append(name)
+    student.append(tpnumber)
+    student.append(mark)
+    return student
+
+def what():
+    print("Do you want to continue? '0' to Continue, '-1' to Terminate")
+    yea = int(input("Continue or Terminate? "))
+    if yea == 0:
+        return True
+    elif yea == -1:
+        return False
+
+def display(student):
+    name = student[0]
+    tpnumber = student[1]
+    mark = student[2]
+    total_marks = total_mark(mark)
+    average_marks = all_average(total_marks, len(mark))
+    grades = grader(average_marks)
+
+    print("Name: ", name)
+    print("TP Number: ", tpnumber)
+    print("Total: ", total_marks)
+    print("Average of Semester: ", average_marks)
+    print("Grade: ", grades)
+
+def displays():
+    choice = int(input("Your options are:\n1. Add new student detail.\n2. View all student details.\n3. Search specific student detail.\nSelect your choice: "))
+    if choice == 1:
+        return True
+
+def all_average(total_mark, subnum):
+    total = total_mark
+    average = total / subnum
+    return average
+
+def grader(average):
+    if average >= 80:
+        return "A+"
+    elif average >= 75:
+        return "A"
+    elif average >= 70:
+        return "B+"
+    elif average >= 65:
+        return "B"
+    elif average >= 60:
+        return "C+"
+    elif average >= 55:
+        return "C"
+    elif average >= 50:
+        return "C-"
+    else:
+        return "D/Fail"
+
+def total_mark(mark):
+    return sum(mark)
+
+student = []
+while True:
+    if displays():
+        student = details()
+        display(student)
+    else:
+        break
