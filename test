@@ -1,52 +1,30 @@
-def details():
-    student = []
-    name = input("Enter Student Name: ")
-    tpnumber = input("Enter " + name + "'s TP Number: ")
-    subnum = int(input("How many subjects in Semester: "))
+students = []
 
-    mark = []
-    for i in range(subnum):
-        subject_marks = int(input("Enter Subject " + str(i+1) + " Marks: "))
-        mark.append(subject_marks)
+def add_student():
+    student = {}
+    student['name'] = input("Enter Student Name: ")
+    student['tpnumber'] = input(f"Enter {student['name']}'s TP Number: ")
+    student['subjects'] = []
+    subcount = int(input("How many subjects in Semester: "))
 
-    student.append(name)
-    student.append(tpnumber)
-    student.append(mark)
-    return student
+    for i in range(subcount):
+        subject_marks = int(input(f"Enter subject {i+1} Marks: "))
+        student['subjects'].append(subject_marks)
 
-def what():
-    print("Do you want to continue? '0' to Continue, '-1' to Terminate")
-    yea = int(input("Continue or Terminate? "))
-    if yea == 0:
-        return True
-    elif yea == -1:
-        return False
+    students.append(student)
 
-def display(student):
-    name = student[0]
-    tpnumber = student[1]
-    mark = student[2]
-    total_marks = total_mark(mark)
-    average_marks = all_average(total_marks, len(mark))
-    grades = grader(average_marks)
+def display_student(student):
+    total_marks = sum(student['subjects'])
+    average_marks = total_marks / len(student['subjects'])
+    grade = calculate_grade(average_marks)
 
-    print("Name: ", name)
-    print("TP Number: ", tpnumber)
+    print("Name: ", student['name'])
+    print("TP Number: ", student['tpnumber'])
     print("Total: ", total_marks)
     print("Average of Semester: ", average_marks)
-    print("Grade: ", grades)
+    print("Grade: ", grade)
 
-def displays():
-    choice = int(input("Your options are:\n1. Add new student detail.\n2. View all student details.\n3. Search specific student detail.\nSelect your choice: "))
-    if choice == 1:
-        return True
-
-def all_average(total_mark, subnum):
-    total = total_mark
-    average = total / subnum
-    return average
-
-def grader(average):
+def calculate_grade(average):
     if average >= 80:
         return "A+"
     elif average >= 75:
@@ -64,13 +42,23 @@ def grader(average):
     else:
         return "D/Fail"
 
-def total_mark(mark):
-    return sum(mark)
+def main():
+    while True:
+        print("Options:")
+        print("1. Add new student detail")
+        print("2. View all student details")
+        print("3. Quit")
+        option = int(input("Enter your choice: "))
 
-student = []
-while True:
-    if displays():
-        student = details()
-        display(student)
-    else:
-        break
+        if option == 1:
+            add_student()
+        elif option == 2:
+            for student in students:
+                display_student(student)
+                print("---------------")
+        elif option == 3:
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+main()
