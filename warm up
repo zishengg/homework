@@ -1,0 +1,7 @@
+fileHandler = open('first.txt','w')
+fileHandler.write('Hello World!\n') 
+fileHandler.close()
+
+fileHandler = open('first.txt','a')
+fileHandler.write('Hello World again!\n') 
+fileHandler.close()
